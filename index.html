@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Abdellatif Osama">
+    <meta name="description" content="Crud System">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Crud System</title>
+</head>
+
+<body>
+    <header class="d-flex justify-content-center align-items-center text-white p-4">
+        <div>
+            <i class="fab fa-4x fa-cuttlefish me-1"></i>
+            <i class="far fa-4x fa-registered me-1"></i>
+            <i class="fa-brands fa-4x fa-uniregistry me-1"></i>
+            <i class="fab fa-4x fa-dyalog"></i>
+        </div>
+    </header>
+    <div class="header-tail p-2 d-flex justify-content-center align-items-center">
+        <p class="mb-0">Products Store</p>
+    </div>
+    <div class="d-flex justify-content-center align-items-center mt-4">
+        <div class="w-75 shadow p-3 mb-5 bg-white roundeds">
+            <div class="mb-3">
+                <label class="mb-1 input-label">Product Name <span>*</span></label>
+                <input class="form-control" type="text" id="ProductName">
+                <div class="alert alert-danger mt-2 d-none" id="ProductNameFalseValidate">
+                    <p class="mb-0">Product Name must start with capital letter and contains minimum 2 letters, Can't
+                        contain special characters</p>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="mb-1 input-label">Product Category <span>*</span></label>
+                <input class="form-control" type="text" id="ProductCategory">
+                <div class="alert alert-danger mt-2 d-none" id="ProductCategoryFalseValidate">
+                    <p class="mb-0">Product Category must start with capital letter and contains minimum 3 letters,
+                        Can't
+                        contain special characters</p>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="mb-1 input-label">Product Price <span>*</span></label>
+                <input class="form-control" type="number" id="ProductPrice">
+                <div class="alert alert-danger mt-2 d-none" id="ProductPriceFalseValidate">
+                    <p class="mb-0">Product Price must be in range 0 : 10000 (Numbers Only)</p>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="mb-1 input-label">Product Description <span>*</span></label>
+                <textarea class="form-control" id="ProductDescription"></textarea>
+                <div class="alert alert-danger mt-2 d-none" id="ProductDescriptionFalseValidate">
+                    <p class="mb-0">Product Description must has minimum 3 letters</p>
+                </div>
+            </div>
+            <div class="d-none" id="EmptyFieldCheck">
+                <p class="text-danger text-center">Please Fill All Required Fields</p>
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+                <button id="add-btn" type="button">Add Product</button>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center align-items-center flex-column">
+        <div class="w-75 shadow p-3 mb-5 bg-white roundeds">
+            <div class="px-4 my-3 mt-1">
+                <input class="form-control" type="search" id="SearchInput" placeholder="⌕ &nbsp; Search By Name">
+            </div>
+            <table class="table table-hover">
+                <thead class="table-head">
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="TableBody"></tbody>
+            </table>
+        </div>
+    </div>
+    <footer class="py-3">
+        <div class="d-flex justify-content-center align-items-center text-white footer-icons">
+            <a href="https://www.facebook.com/abdellatifosama81/" target="_blank">
+                <i class="fa-brands fa-facebook me-1"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/abdellatif-osama-2335121ab/" target="_blank">
+                <i class="fa-brands fa-linkedin me-1"></i>
+            </a>
+            <a href="mailto:abdellatifosama81@gmail.com">
+                <i class="fa-brands fa-google"></i>
+            </a>
+        </div>
+        <div class="d-flex justify-content-center align-items-center text-white">
+            <i class="fa-regular fa-copyright"></i>
+            <p class="mb-0">&nbsp;2022 Abdellatif Osama. All Rights Reserved</p>
+        </div>
+    </footer>
+    <div class="to-top opacity-0 cursor-pointer" id="to-top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

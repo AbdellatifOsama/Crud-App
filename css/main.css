@@ -1,0 +1,84 @@
+:root {
+    --main-color: #2a8a85;
+    --secondary-color:#e2dfdf;
+    --input-label:#19524f;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+.main-color{
+    color: var(--main-color);
+}
+.form-control:focus{
+    border-color: var(--main-color);
+    box-shadow: 0 0.5px 0.5px rgba(0, 0, 0, 0.075) inset, 0 0 6px var(--main-color);
+    outline: 0 none;
+}
+header , footer{
+    background-color: var(--main-color);
+}
+.header-tail{
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    font-weight: 400;
+}
+.input-label{
+    color:var(--input-label);
+    font-size: 18px;
+}
+.input-label span , .delete-icon{
+    color: #DC0000;
+}
+#add-btn{
+    background-color: var(--main-color);
+    border: 1px transparent solid;
+    border-radius: 20px;
+    padding: 8px 10px;
+    color: #fff;
+    transition: all 0.5s;
+}
+#add-btn:hover{
+    color: var(--main-color);
+    background-color: #fff;
+    border: var(--main-color) 1px solid;
+}
+.table-head{
+    background-color: var(--main-color);
+    color: #fff;
+}
+.table-head th{
+    font-weight: 500 !important;
+}
+.footer-icons{
+    font-size: 22px;
+}
+.footer-icons a{
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.5s;
+}
+.footer-icons a:hover {
+    opacity: 0.5;
+}
+.to-top{
+    display: flex;
+    transition: all 0.5s;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    color: #fff;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
